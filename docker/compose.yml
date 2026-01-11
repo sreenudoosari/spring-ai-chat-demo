@@ -1,0 +1,20 @@
+services:
+
+  spring-ai-chat-app:
+    image: sdoos/spring-ai-chat-app
+    container_name: spring-ai-chat-app
+    models:
+      smollm2:
+         endpoint_var: AI_MODEL_URL
+         model_var: AI_MODEL_NAME
+    ports:
+      - "8080:8080"
+      - "5005:5005"
+    environment:
+      SPRING_PROFILES_ACTIVE: docker
+      JAVA_TOOL_OPTIONS: "-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:5005"
+    restart: unless-stopped
+
+models:
+  smollm2:
+    model: ai/smollm2

@@ -23,6 +23,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 //@ActiveProfiles("gemini")
 //@ActiveProfiles("docker-smollm2")
 //@ActiveProfiles("docker-gemma3")
+//@ActiveProfiles("docker")
 class AiChatControllerTest {
 
     @Autowired
