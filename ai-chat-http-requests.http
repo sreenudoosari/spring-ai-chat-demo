@@ -1,0 +1,7 @@
+### AiChatController
+POST http://localhost:8080/api/chat
+Content-Type: application/json
+
+{
+  "prompt": "Tell a very short joke in french."
+}
