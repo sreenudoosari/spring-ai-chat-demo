@@ -15,7 +15,7 @@ public class AiChatController {
     private final ChatClient chatClient;
 
     AiChatController(ChatClient.Builder builder) {
-        this.chatClient = builder.build();
+        this.chatClient = builder.defaultAdvisors(new SimpleLoggerAdvisor()).build();
     }
 
     @PostMapping
